@@ -5,12 +5,12 @@ Angel Moreno, [17/08/22 6:03 A. M.]
      <h1> Consumo De Una Api Con <span><img class="logo" src="./assets/logo.svg" alt="logo vue" ></span>ue.JS</h1></div>
        <table>
          <tbody >
-           <tr v-for="todo of todos" :key="todo.id">
-           <td class="avatar"><img :src=" todo.avatar" alt="avatar">{{  }}</td>
-           <td class="id">{{ todo.id }}</td>
-           <td class="first_name">{{ todo.first_name }}</td>
-           <td class="las_name">{{ todo.last_name }}</td>
-           <td class="las_name">{{ todo.email }}</td>
+           <tr v-for="user of users" :key="user.id">
+           <td class="avatar"><img :src=" user.avatar" alt="avatar">{{  }}</td>
+           <td class="id">{{ user.id }}</td>
+           <td class="first_name">{{ user.first_name }}</td>
+           <td class="las_name">{{ user.last_name }}</td>
+           <td class="las_name">{{ user.email }}</td>
 
       </tr>
       </tbody>
@@ -30,7 +30,7 @@ import axios from 'axios'
 export default {
   data: function () {
     return {
-      todos: [],
+      users: [],
       page: 1,
       pages: 1
 
@@ -47,7 +47,7 @@ export default {
       axios
           .get('https://reqres.in/api/users?page/', {params})
           .then( res => {
-            this.todos = res.data.data
+            this.users = res.data.data
             this.pages = res.data.pages
             console.log(res.data)
           })
