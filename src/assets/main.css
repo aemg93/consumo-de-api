@@ -1,0 +1,47 @@
+@import "./base.css";
+
+
+#app {
+
+  margin: 0 auto;
+  padding: 0rem;
+  font-weight: normal;
+
+
+}
+
+button,
+.green {
+  font-weight: bold;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  transition: 0.4s;
+  background: #c2b9ac;
+}
+
+@media (hover: hover) {
+  button:hover {
+    background-color: hsla(227, 93%, 47%, 0.2);
+    color: #050505;
+  }
+}
+body {
+  padding: 10%;
+
+}
+
+@media (min-width: 240px) {
+  body {
+    display: flex;
+    place-items: center;
+    width: 100%;
+
+  }
+
+  #app {
+    display: flex;
+   flex-direction: column;
+    padding: 0 2rem;
+    justify-content: center;
+  }
+}
